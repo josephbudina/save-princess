@@ -7,9 +7,9 @@ class BotSavesPrincess
 
   def display_path_to_princess
     moves = []
-    rows, cols = @grid.position_difference
+    rows, columns = @grid.position_difference
     moves << (rows.negative? ? (['UP'] * rows.abs) : (['DOWN'] * rows))
-    moves << (cols.negative? ? (['LEFT'] * cols.abs) : (['RIGHT'] * cols))
+    moves << (columns.negative? ? (['LEFT'] * columns.abs) : (['RIGHT'] * columns))
     moves.flatten.each { |move| puts move }
   end
 end
