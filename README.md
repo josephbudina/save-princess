@@ -1,4 +1,4 @@
-# save-princess SESAC challenge
+# Bot Saves Princess SESAC Challenge
 
 The files that are labeled sp1_hackerrank_solution and sp2_hackerrank_solution contain the both solutions that are ready to be copy and pasted straight into the hacker rank IDE.
 
