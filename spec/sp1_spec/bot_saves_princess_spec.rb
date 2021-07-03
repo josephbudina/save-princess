@@ -1,20 +1,17 @@
 require './spec_helper'
-require 'sp1/bot_saves_princess'
-require 'grid'
+require 'save_princess_1/bot_saves_princess'
 
 describe 'Bot Saves Princess' do
   it 'should instantiate with correct x/y coordinates for bot' do
-    grid = Grid.new(3, ["---", "-m-", "p--"])
-    bot = BotSavesPrincess.new(grid)
+    bot = BotSavesPrincess.new(3, ["---", "-m-", "p--"])
 
-    expect(bot.grid.class).to eq(Grid)
-    expect(bot.grid.bot_xy).to eq([1, 1])
+    expect(bot.directions).to eq(["DOWN", "LEFT"])
+    expect(bot.move_count).to eq(1)
   end
 
   it 'should provide moves to get to princess' do
-    grid = Grid.new(3, ["---", "-m-", "p--"])
-    bot = BotSavesPrincess.new(grid)
+    bot = BotSavesPrincess.new(3, ["---", "-m-", "p--"])
 
-    expect(bot.display_path_to_princess).to eq(["DOWN", "LEFT"])
+    expect(bot.display_path_to_princess).to eq(1)
   end
 end
