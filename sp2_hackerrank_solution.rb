@@ -1,7 +1,4 @@
 class BotSavesPrincess2
-  attr_reader :bot_coords,
-              :princess_coords
-
   def initialize(row, column, grid)
     @bot_coords = [row, column]
     @princess_coords = find_princess_position(grid)
@@ -27,8 +24,24 @@ class BotSavesPrincess2
       puts 'LEFT'
     elsif distance[1] > 0
       puts 'DOWN'
-    else
+    elsif distance[1] < 0
       puts 'UP'
     end
   end
 end
+def nextMove(n,r,c,grid)
+  bot = BotSavesPrincess2.new(r,c,grid)
+    bot.next_move
+end
+
+n = gets.to_i
+
+r,c = gets.strip.split.map {|num| num.to_i}
+
+grid = Array.new(n)
+
+(0...n).each do |i|
+    grid[i] = gets
+end
+
+nextMove(n,r,c,grid)
