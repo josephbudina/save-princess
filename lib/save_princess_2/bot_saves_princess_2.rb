@@ -27,7 +27,7 @@ class BotSavesPrincess2
       puts 'LEFT'
     elsif distance[1] > 0
       puts 'DOWN'
-    elsif distance[1] < 0
+    else
       puts 'UP'
     end
   end
